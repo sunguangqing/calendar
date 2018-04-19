@@ -1,4 +1,4 @@
-### 订单查询 酒店入住 日历选择功能实现
+### 订单查询 酒店入住 日历选择功能
 
 https://sunguangqing.github.io/calendar/calendar.html
 
