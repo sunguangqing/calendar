@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 根据浏览器的屏幕大小自适应的展现合适的效果 -->
+    <meta name="applicable-device" content="pc,mobile" />
+    <!-- 移动端 浏览器中页面将以原始大小显示，不允许缩放 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <!--自动选择更好的浏览器-->
+    <meta name="renderer" content="webkit">
+    <title>日历选择插件</title>
+    <link rel="stylesheet" href="css/calendar.css" />
+</head>
+<body>
+
+<!--订单查询-->
+<div class="wrap">
+    <div class="title">订单查询：</div>
+    <div class="selected-time">
+        下单时间
+        <div class="date-box">
+            <input type="text" class="Wdate" id="start-time" onclick="WdatePicker({maxDate:'%y-%M-%d'})"/>
+        </div>
+        至
+        <div class="date-box">
+            <input type="text" class="Wdate" onclick="WdatePicker({minDate:'#F{$dp.$D(\'start-time\',{d:0});}',maxDate:'%y-%M-%d'})"/>
+        </div>
+    </div>
+</div>
+
+<div class="wrap">
+    <div class="title">订单查询：<b>( 精确到时分 )</b></div>
+    <div class="selected-time">
+        下单时间
+        <div class="date-box">
+            <input type="text" class="Wdate" id="start-time-order" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:'%y-%M-%d {%H-1}:%m:%s'})"/>
+        </div>
+        至
+        <div class="date-box">
+            <input type="text" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss', minDate:'#F{$dp.$D(\'start-time-order\',{d:0});}',maxDate:'%y-%M-%d %H:%m:%s'})"/>
+        </div>
+    </div>
+</div>
+
+<!--酒店入住-->
+<div class="wrap">
+    <div class="title">酒店入住：</div>
+    <div class="selected-time">
+        入住时间
+        <div class="date-box">
+            <input type="text" class="Wdate" id="start-time-hotel" onclick="WdatePicker({skin:'whyGreen', minDate:'%y-%M-%d', maxDate:'2050-12-12'})"/>
+        </div>
+        至
+        <div class="date-box">
+            <input type="text" class="Wdate" onclick="WdatePicker({skin:'whyGreen', minDate: '#F{$dp.$D(\\\'start-time-hotel\\\',{d:1});}'})"/>
+        </div>
+    </div>
+</div>
+
+<script src="calendar/WdatePicker.js"></script>
+</body>
+</html>
