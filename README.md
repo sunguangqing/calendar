@@ -4,16 +4,15 @@ https://sunguangqing.github.io/calendar/calendar.html
 
 ### My97DatePicker日期控件地址：http://www.my97.net/demo/index.htm
 
->下载calendar文件夹放到根目录中，将WdatePicker.js文件引用到页面中即可, <script src="calendar/WdatePicker.js"></script>
+>下载calendar文件夹放到根目录中，将WdatePicker.js文件引用到页面中即可 <br /><script src="calendar/WdatePicker.js"></script>
 
 #### `HTML结构：`
-##### >订单查询日历控件使用 
+#### >订单查询日历控件使用 
 >可选择的时间不能超过当前的时间，后面选择框的时间不能小于前面选定的时间并且不能大于当前的时间
 ```HTML
 <div class="date-btn">
     <input id="start-time"  onclick="WdatePicker({maxDate:'%y-%M-%d'})" /> ~
     <input onclick="WdatePicker({minDate:'#F{$dp.$D(\'start-time\',{d:0});}',maxDate:'%y-%M-%d'})" />
-    <span class="wdate-icon"></span>
 </div>
 ```
 
@@ -38,23 +37,15 @@ https://sunguangqing.github.io/calendar/calendar.html
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    margin-left: 18px;
     padding: 0 18px;
 }
 .date-btn input{
     position: relative;
     top: -2px;
-    width: 90px;
+    width: 100px;
     height: 28px;
     border: 0;
     text-align: center;
     color: #777;
-}
-.date-btn .wdate-icon{
-    float: right;
-    width: 14px;
-    height: 14px;
-    background: url("../images/data-icon.png") no-repeat center center;
-    margin-top: 8px;
 }
 ```
